@@ -5,12 +5,14 @@ let maxKey = 0;
 let count;
 let minValue = 10;
 while(roll){
-    let diceValue = Math.floor(Math.random() * 6) + 1;
+    let diceValue = Math.floor(Math.random() * 6) + 1; //Getting the dice value
     if(dice.has(diceValue)){
+        //If it is present in map it increments
         count = dice.get(diceValue);
         dice.set(diceValue,count+1);
     }
     else{
+        //If it is not present in map it adds
         count = 1;
         dice.set(diceValue,count);
     }
